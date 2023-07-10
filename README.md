@@ -45,7 +45,7 @@ The code in this project performs the following tasks:
 1. Run the script `source/data_manager.py` with the following command-line arguments:
 
    ```
-   python3 script_name.py <ticker> <interval>
+   python3 source/data_manager_binance.py BTCUSDT 1m
    ```
 
    - `<ticker>`: The ticker symbol of the financial asset (e.g., stock symbol).
@@ -60,17 +60,3 @@ The code in this project performs the following tasks:
 ```
 python3 script_name.py AAPL 1d
 ```
-
-## License
-
-Mention the license under which the project is distributed.
-
-## Contributors
-
-Mention the contributors or provide guidelines for contributing to the project.
-
-## Contact
-
-Provide contact information or links for users to get in touch with the project maintainer or team.
-
-This is a basic outline of the `README.md` file based on the code you provided. You can modify and expand it according to your project's specific requirements and additional details you want to provide.

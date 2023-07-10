@@ -2,25 +2,30 @@
 
 Scrape, download data and save into database each minute.
 
-### Usage (with nohup)
-   ```
-./source/lunch_data_managers.sh
-   ```
-
-   ```
-nohup python3 start_process.py SPY 1m >> logs/SPY_1m_output.log 2>> logs/SPY_1m_error.log &
-   ```
-
-   ```
-nohup python3 ./source/data_manager_binance.py ETHUSDT 1m >> logs/ETHUSDT_1m_output.log 2>> ./logs/ETHUSDT_1m_error.log &
-   ```
-
 ## Description
 
 The code in this project performs the following tasks:
 
 1. Downloads the last candlestick data for a specified financial asset using the `yfinance` library.
 2. Saves the downloaded data into a SQLite database specified by the provided ticker and interval.
+ 
+## Start capturing datapoints
+
+Run all streaming processes for both stock market and cryptocurrencies market.
+   ```
+./source/run_data_managers_binance.sh
+./source/run_data_managers_yfinance.sh
+   ```
+or with a single stock market
+   ```
+nohup python3 ./source/data_manager_yfinance.py SPY 1m >> logs/SPY_1m_output.log 2>> logs/SPY_1m_error.log &
+   ```
+or with a single crypto
+   ```
+nohup python3 ./source/data_manager_binance.py ETHUSDT 1m >> logs/ETHUSDT_1m_output.log 2>> ./logs/ETHUSDT_1m_error.log &
+   ```
+
+
 
 ## Prerequisites
 

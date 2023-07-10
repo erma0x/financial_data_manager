@@ -1,6 +1,8 @@
-# Financial data manager
+# Financial data manager 🪙
 
 Scrape, download data and save into database each minute.
+
+![](./schema.png)
 
 ## Description
 
